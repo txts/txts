@@ -1,5 +1,6 @@
 Fry=../fry/
-Out=../txt.github.io/
+Out=../txts.github.io/
 Raw=./
+Dirs=$(Out)se $(Out)ase
 
 include $(Fry)Makefile
