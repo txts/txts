@@ -1,6 +1,6 @@
-Fry=../fry/
-Out=../txts.github.io/
-Raw=./
-Dirs=$(Out)se $(Out)ase
+Fry=../fry
+Out=../txts.github.io
+Raw=.
+Dirs=$(Out)/se $(Out)/ase
 
-include $(Fry)Makefile
+include $(Fry)/Makefile
