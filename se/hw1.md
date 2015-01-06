@@ -3,63 +3,151 @@ title: Homework1
 mantra: Cause we get more done if we work together
 ---
 
-# Motivation #
 
-Q: What can students SE learn that will still be relevant in a 10 years,
-20 years from now?
+## Goals 
 
-A: How to work "effectively" in teams.
+Learn how to work effectively in teams via
 
-The premise of this exercise is that team members share products in
-some _version controlled_ environment that contains some
-_configuration management_ 
-tools. It should be also possible to reflect on this work to identify
-project _bad smells_ that can prompt process improvement.
++ Version control systems (Github)
++ Configuration management systems (UNIX Makefile)
++ Virtualization (NcState Virtual Computing Lab)
++ Text-based markup tools (Pandoc, markdown, gnuplot, latex, bibtex)
 
-+ _Version control_  Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
-A version control system with web support enables a team to share code,
-track changes made by other people, and (in the worse case) back out from
-bad changes to a prior useful version.
-+ _Configuration management_
-+ _Bad smells_
-+ _Process improvement_
+## What to Do 
 
-# The Task #
+Build a very simple static web site that is:
 
-Build a set of web-based slides that introduce your
-team. The first slide should list some funky name;
- the second slide should be a list of links to the rest
-of the material;
-the next few slides should outline your planned two
-month project;
++ Feed from a Github repo (so any context committed to the repo updates the website)
++ That is shared with your team mates via Github (so multiple people can work on the site)
++ That is rendered via text-based mark up tools (so it can be maintained very quickly)
++ That is configured using Make (so anyone can copy and set it up for themselves, locally)
 
-Store the raw materials for those slides in a
-version control systems (where different members
-write different parts).
+Specifically, you will build a web site that
+contains a slide show that describes your large
+project proposal and your personnel (one slide per
+person)
 
-Implement a configuration management system such
-that anyone can build or update your slides by:
++ Do not put contact details onto the slides for each person (death to spammers);
++ The large project proposal will be described to you in lectures.
 
-```
-make update      # calls an update to the web-based VC system
-make configure   # applies the configuration management system.
-```
+For an example of those slides:
 
-Note that:
++ See http://txts.github.io/slides/talk1.html.
 
-+ If the above is called twice, the second call should do very little
-(since it was all done the first time).
-+ If the above is called, then random files are deleted in the WWW directory,
-  then the second call should do some minimal changes to fix up the slides.
+## How to Start 
+
+### Set up Github
+
++ Create a team of people (four people per team)
++ Create a public Github account (do not use the NcState one);
++ In that Github, create a new organization (called, e.g. XYZ).
++ Go to https://github.com/orgs/XYZ/teams and create a new team with _Admin Access_.
++ Add all your team members to that team.
++ In that organization, create repos called  `XYZ.github.io`,
+  `fry` and `txts`.
   
+### Set up a public static web site using Github
 
-# Todo #
+Note : do not use Github's ghpage tool. And do not use Jekyll. We are doing this
+  old school.
 
-Set up:
++ In the XYZ organization, create a new repo called XYZ.github.io
++ In that repo, add a file `index.html` with some text in it like _hello_
++ In a few minutes, it your surf to http://XYZ.github.io, you should
+	  see _hello_.
 
-+ Get a Github account (not the private NC state one, but one of the free
-  and public ones at github.com).
-+ Get an ISP that serves static web pages. For NcState students, set up
-  your [WWW4](https://oit.ncsu.edu/afs/www-setup) space.
-+ Get a working version of [pandoc](http://johnmacfarlane.net/pandoc/)
-  (which can translate between Markdown and many other formats).
+### Set up Tools
+
+Set up pandoc, texlive, gnuplot, pandoc-citeproc, make, bash, awk, graphviz and
+20 other little tools used for this work
+
++ Method1: the easy way. Log into the  `\_timmnix` image I made for you at
+  http://http://vcl.drupal.ncsu.edu.  Then `cd /afs/unity/users/a-z/unityid/`
+  Now you are using all the tools I installed for you, and you can write to
+  your personnel file space.
++ Method2: the hard way. Get some *Nix site going (e.g. ubuntu on virtual box
+  on whatever machine you like). Download and run https://github.com/timm/timmnix/blob/master/install.sh.
+
+Note I will support Method1 users and  Method2, **you are on their own**. If you
+have any problems with Method2 then my only help will be to say, try method2.
+
+### Download the repos
+
+```
+cd /afs/unity/users/a-z/unityid # or wherever you work
+mkdir gits
+cd gits
+git clone https://github.com/XYZ/fry.git
+cd fry
+wget https://github.com/txts/fry/archive/master.zip
+unzip master.zip
+mv fry-master/* .
+rm -rf *.zip fry-master
+git add --all
+cd ..
+
+git clone https://github.com/XYZ/txts
+cd txts
+wget https://github.com/txts/txts/archive/master.zip
+unzip master.zip
+mv txts-master/* .
+rm -rf *.zip txts-master
+git all --all
+cd ..
+```
+
+Then do a _test install_, as shown below.
+
+## How to test the site 
+
+### Test Install
+
++ In a blank directory check out the two repos described below.
++ Edit the file txts/Makefile. Change `Out` to point to some output directory.
++ cd txts
++ make ready
++ Go to the _slides_ directory and look at `talk1.html`.
++ Check that it looks something like http://txts.github.io/slides/talk1.html.
+
+### Test Configuration Tools
+
++ Delete any file in the `Out` directory
++ cd txts
++ make ready
++ Check that the deleted file has returned
+
+### Test update
+
++ cd txts/slides
++ Make some change to the text in `talk1.html`
++ cd txts
++ make commit
++ Delete your `Out` directory and the the two repos (using `rm -rf`)
++ Repeat the test install. Check that you see your text change in the new `talk1.html`.
+
+## What to hand in 
+
++ Fill out the [homework1 rubric](rubric1.html).
++ Print https://github.com/XYZ/txts/graphs/contributors.
++ Copy these two things three times.
++ Staple together each copy (table first, commit logs second). Unstabled
+  material will not be accepted. No joke.
++ Hand in these three copies.
+
+When you fill in the following table,
+fill in the _self score_ column by ticking all the items
+you think you have completed.
+
++ Do not write anything into the columns _peer score_`, _final score_
+
+
+In the following:
+
++ Where it says _modified X_, this means at least one change (however slight)
+  from the stuff already in http://txts.github.io/slides/talk1.html.
++ Where is says "all members have committed", we will check that using
+  the github logs. Note that we do **not** expect to see _outliers_ in the commit
+  pattern such as one person with 90% or 10% of the commits.
+  
+ 
+

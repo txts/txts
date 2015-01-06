@@ -368,6 +368,25 @@ ul.outline li.folded:hover {
   background: transparent url(../graphics/unfold.gif) no-repeat 0px 0.5em;
 }
 
+tr.header {
+    background-color: black;
+    color: white
+}
+tr.even { 
+    background-color: #CCC;
+}
+caption{
+    color: red
+}
+table {border: 1px solid black;
+padding-top: 7px;
+padding-bottom: 14px;
+    
+-moz-box-shadow: 10px 10px 5px #888;
+-webkit-box-shadow: 10px 10px 5px #888;
+box-shadow: 10px 10px 5px #888;
+}
+
 /* for slides with class "title" in table of contents */
 a.titleslide { font-weight: bold; font-style: italic }
 
