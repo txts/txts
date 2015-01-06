@@ -1,6 +1,9 @@
-Fry=../fry
-Out=../txts.github.io
-Raw=.
-Dirs=$(Out)/se $(Out)/ase
+Parent=./..
 
-include $(Fry)/Makefile
+Fry=./../fry
+Out=./../txts.github.io
+Raw=$(PWD)
+
+
+
+include $(Fry)/fry.mk
