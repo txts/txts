@@ -62,19 +62,22 @@ Set up pandoc, texlive, gnuplot, pandoc-citeproc, make, bash, awk, graphviz and
 20 other little tools used for this work
 
 + Method1: the easy way. Log into the  `\_timmnix` image I made for you at
-  http://http://vcl.drupal.ncsu.edu.  Then `cd /afs/unity/users/a-z/unityid/`
+  http://http://vcl.drupal.ncsu.edu.  Then `cd /afs/unity.ncsu.edu/users/a-z/unityid/`
   Now you are using all the tools I installed for you, and you can write to
   your personnel file space.
-+ Method2: the hard way. Get some *Nix site going (e.g. ubuntu on virtual box
-  on whatever machine you like). Download and run https://github.com/timm/timmnix/blob/master/install.sh.
++ Method2: another way. Get a c9.io account and  download and run https://github.com/timm/timmnix/blob/master/install.sh from the command line terminal.
++ Method3: a hard way. As per Method  but use
+  your own hardware  (e.g. ubuntu on virtual box
+  on whatever machine you like). 
 
-Note I will support Method1 users and  Method2, **you are on their own**. If you
-have any problems with Method2 then my only help will be to say, try method2.
+Note I will support Method1 users. As to Method2 and Method3,
+**you are on their own**. If you
+have any problems with Method2,3 then my only help will be to say "try method1".
 
 ### Download the repos
 
 ```
-cd /afs/unity/users/a-z/unityid # or wherever you work
+cd /afs/unity.ncsu.edu/users/a-z/unityid # or wherever you work
 mkdir gits
 cd gits
 git clone https://github.com/XYZ/fry.git
