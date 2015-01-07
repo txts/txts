@@ -57,7 +57,7 @@ files:
 talks:  $(call target,slides,md,html,$(Raw),$(Out))
 dots  : $(call target,dot,dot,png,$(Raw),$(Out)/img)
 plots : $(call target,plot,plt,png,$(Raw),$(Out)/img)
-pages : $(call target,posts,md,html,$(Raw),$(Out))
+pages : $(call target,posts,md,html,$(Raw),$(Out)/..)
 
 $(Out)/slides/%.html : $(Raw)/slides/%.md
 	pandoc -s \
