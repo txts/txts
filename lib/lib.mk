@@ -16,7 +16,7 @@ define target
 endef
 
 
-ready : dirs verbatims dots talks plots
+ready : dirs files dots talks plots pages
 
 gitting:
 	git config --global credential.helper cache
@@ -51,13 +51,15 @@ dirs:
 	@ mkdir -p $(Out)/img/plot
 	@cp -vrup $(Lib)/etc $(Raw)
 	@cp -vrup $(Lib)/img/slidy.css $(Raw)/verbatim/img
+	@cp -vrup $(Lib)/img/posty.css $(Raw)/verbatim/img
 
-verbatims:
+files:
 	@cp -vrup $(Raw)/verbatim/* $(Out)
 
 talks:  $(call target,slides,md,html,$(Raw),$(Out))
 dots  : $(call target,dot,dot,png,$(Raw),$(Out)/img)
 plots : $(call target,plot,plt,png,$(Raw),$(Out)/img)
+pages : $(call target,.,md,html,$(Raw),$(Out))
 
 $(Out)/slides/%.html : $(Raw)/slides/%.md
 	pandoc -s \
@@ -73,3 +75,10 @@ $(Out)/img/dot/%.png : $(Raw)/dot/%.dot
 $(Out)/img/plot/%.png : $(Raw)/plot/%.plt
 	gnuplot $< > $@
 
+$(Out)/%.html : $(Raw)/*.md
+	echo page $<
+		pandoc -s \
+              -r markdown+simple_tables+table_captions \
+              --biblio $(Raw)/biblio.bib \
+	            -c        ../img/posty.css \
+              -o $@ $<
