@@ -78,6 +78,8 @@ $(Out)/img/plot/%.png : $(Raw)/plot/%.plt
 	gnuplot $< > $@
 
 $(Out)/posts/%.html : $(Raw)/posts/%.md
+	echo "\n\n\n\n\n\n" out $@
+	echo in $<
 	pandoc -s \
               -r markdown+simple_tables+table_captions \
 		-B $(Raw)/before.html \
