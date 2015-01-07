@@ -3,7 +3,9 @@ title: Homework1
 mantra: Cause we get more done if we work together
 ---
 
-(See also: [the grading rubric](rubric1.html).)
+(See also: [the grading rubric](rubric1.html);
+a [tutorial on make](make.html); and 
+the [Pandoc home page](http://johnmacfarlane.net/pandoc/).)
 
 ## Goals 
 
@@ -31,7 +33,7 @@ person)
 + Do not put contact details onto the slides for each person (death to spammers);
 + The large project proposal will be described to you in lectures.
 
-[egsite]: http://www4.ncsu.edu/~tjmenzie/cs510/spring15/hw/1/slides/talk1.html "Example of site"
+[egsite]: http://www4.ncsu.edu/~tjmenzie/cs510/slides/talk1.html "Example of site"
 
 ## How to Start 
 
@@ -126,6 +128,21 @@ make
 ```
 
 And you should see no output since the slides are up to date with your current contents.
+
+(Tip: if in your work you see
+
+```
+** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+```
+
+then run these `git congfig` commands to get everything set up.
 
 ### Test Configuration Tools
 

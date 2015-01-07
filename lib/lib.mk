@@ -17,6 +17,7 @@ endef
 
 
 ready : dirs files dots talks plots pages
+	@echo "See $(Out)"
 
 gitting:
 	git config --global credential.helper cache
