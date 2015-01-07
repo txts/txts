@@ -3,11 +3,11 @@
 # Not to be used directly.
 # To be included in other Makefiles
 # that have determined variables for
-# Raw, Fry, Out
+# Raw, Lib, Out
 #
 #########
 
-Dirs=$(Fry) $(Raw) $(Out)
+Dirs=$(Lib) $(Raw) $(Out)
 
 define target
    $(subst $4,$5,\
@@ -40,10 +40,10 @@ Skeleton=dot etc plot slides verbatim/img
 dirs: 
 	@$(foreach d,$(Skeleton),mkdir -p $(Raw)/$d;)
 	@mkdir -p $(Out)/slides
-	@mkdir -p $(Out)/img/dot
-	@mkdir -p $(Out)/img/plot
-	@cp -vrup $(Fry)/etc $(Raw)
-	@cp -vrup $(Fry)/img/slidy.css $(Raw)/verbatim/img
+	@ mkdir -p $(Out)/img/dot
+	@ mkdir -p $(Out)/img/plot
+	@cp -vrup $(Lib)/etc $(Raw)
+	@cp -vrup $(Lib)/img/slidy.css $(Raw)/verbatim/img
 
 verbatims:
 	@cp -vrup $(Raw)/verbatim/* $(Out)

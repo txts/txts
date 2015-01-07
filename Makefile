@@ -1,7 +1,7 @@
 
-Out=../../../www/cs510/spring15/hw/1
+Out=../../www/cs510/spring15/hw/1
 Raw=$(PWD)
-Fry=./fry
+Lib=./eden
 
-include $(Fry)/fry.mk
+include $(Lib)/fry.mk
 
