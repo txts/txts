@@ -50,8 +50,6 @@ dirs:
 	@ mkdir -p $(Out)/img/dot
 	@ mkdir -p $(Out)/img/plot
 	@cp -vrup $(Lib)/etc $(Raw)
-	@cp -vrup $(Lib)/img/slidy.css $(Raw)/verbatim/img
-	@cp -vrup $(Lib)/img/posty.css $(Raw)/verbatim/img
 
 files:
 	@cp -vrup $(Raw)/verbatim/* $(Out)
