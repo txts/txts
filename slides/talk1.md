@@ -1,5 +1,5 @@
 % Eating Habits
-% John Doe
+% Jane Doe
 % March 22, 2005
 
 # In the morning

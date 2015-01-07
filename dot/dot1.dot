@@ -1,6 +1,6 @@
 digraph {
-  saturday -> sunday 
+  saturdays -> sunday 
   sunday  -> weekday [label="sad"];
-  weekday -> saturday [label="happy"];
+  weekday -> saturdays [label="happy"];
   
 }

@@ -1,4 +1,4 @@
-set terminal png  transparent enhanced font "arial,10" fontscale 1.0 size 500, 350 
+set terminal png  transparent enhanced  fontscale 1.0 size 500, 350 
 # set output 'contours.17.png'
 set view 60, 30, 0.85, 1.1
 set samples 25, 25
