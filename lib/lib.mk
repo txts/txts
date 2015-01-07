@@ -50,7 +50,7 @@ dirs:
 	@mkdir -p $(Out)/posts
 	@ mkdir -p $(Out)/img/dot
 	@ mkdir -p $(Out)/img/plot
-	@cp -vrup $(Lib)/etc $(Raw) 
+	@cp -vrup $(Lib)/etc/* $(Raw) 
 
 files:
 	@cp -vrup $(Raw)/verbatim/* $(Out)
@@ -77,6 +77,7 @@ $(Out)/img/plot/%.png : $(Raw)/plot/%.plt
 $(Out)/posts/%.html : $(Raw)/posts/*.md
 	pandoc -s \
               -r markdown+simple_tables+table_captions \
+		-B $(Raw)/before.html \
               --biblio $(Raw)/biblio.bib \
 	            -c        ../img/posty.css \
               -o $@ $<
