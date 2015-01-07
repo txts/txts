@@ -47,6 +47,7 @@ Skeleton=dot etc plot slides verbatim/img
 dirs: 
 	@$(foreach d,$(Skeleton),mkdir -p $(Raw)/$d;)
 	@mkdir -p $(Out)/slides
+	@mkdir -p $(Out)/posts
 	@ mkdir -p $(Out)/img/dot
 	@ mkdir -p $(Out)/img/plot
 	@cp -vrup $(Lib)/etc $(Raw) 
@@ -57,7 +58,7 @@ files:
 talks:  $(call target,slides,md,html,$(Raw),$(Out))
 dots  : $(call target,dot,dot,png,$(Raw),$(Out)/img)
 plots : $(call target,plot,plt,png,$(Raw),$(Out)/img)
-pages : $(call target,posts,md,html,$(Raw),$(Out))
+pages : $(call target,posts,md,html,$(Raw),$(Out)/..)
 
 $(Out)/slides/%.html : $(Raw)/slides/%.md
 	pandoc -s \
@@ -73,9 +74,8 @@ $(Out)/img/dot/%.png : $(Raw)/dot/%.dot
 $(Out)/img/plot/%.png : $(Raw)/plot/%.plt
 	gnuplot $< > $@
 
-$(Out)/posts/%.html : $(Raw)/*.md
-	echo pa
-	ge $<
+$(Out)/%.html : $(Raw)/posts/*.md
+	echo page $<
 		pandoc -s \
               -r markdown+simple_tables+table_captions \
               --biblio $(Raw)/biblio.bib \
