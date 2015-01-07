@@ -58,7 +58,7 @@ files:
 talks:  $(call target,slides,md,html,$(Raw),$(Out))
 dots  : $(call target,dot,dot,png,$(Raw),$(Out)/img)
 plots : $(call target,plot,plt,png,$(Raw),$(Out)/img)
-pages : $(call target,posts,md,html,$(Raw),$(Out)/..)
+pages : $(call target,posts,md,html,$(Raw),$(Out))
 
 $(Out)/slides/%.html : $(Raw)/slides/%.md
 	pandoc -s \
@@ -74,9 +74,8 @@ $(Out)/img/dot/%.png : $(Raw)/dot/%.dot
 $(Out)/img/plot/%.png : $(Raw)/plot/%.plt
 	gnuplot $< > $@
 
-$(Out)/%.html : $(Raw)/posts/*.md
-	echo page $<
-		pandoc -s \
+$(Out)/posts/%.html : $(Raw)/posts/*.md
+	pandoc -s \
               -r markdown+simple_tables+table_captions \
               --biblio $(Raw)/biblio.bib \
 	            -c        ../img/posty.css \

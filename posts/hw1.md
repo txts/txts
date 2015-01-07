@@ -31,7 +31,7 @@ person)
 + The large project proposal will be described to you in lectures.
 
  
-[egsite]: http://www4.ncsu.edu/~tjmenzie/cs510/spring15/hw/1/slides/talk1.html "Example of site".
+[egsite]: http://www4.ncsu.edu/~tjmenzie/cs510/spring15/hw/1/slides/talk1.html "Example of site"
 
 ## How to Start 
 
