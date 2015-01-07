@@ -6,7 +6,7 @@ set isosamples 26, 26
 set contour base
 set cntrparam bspline
 set title "3D gnuplot demo - contour of Sinc function" 
-set xlabel "X axis" 
+set xlabel "Xx axis" 
 set ylabel "Y axis" 
 set zlabel "Z axis" 
 set zlabel  offset character 1, 0, 0 font "" textcolor lt -1 norotate
