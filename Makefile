@@ -1,10 +1,7 @@
-Parent=./..
 
 Fry=./../fry
-Out=./../txts.github.io
+Out=../../../www
 Raw=$(PWD)
 
 include $(Fry)/fry.mk
 
-overRideSomething:
-	@echo do nothing
