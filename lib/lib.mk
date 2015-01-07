@@ -74,7 +74,8 @@ $(Out)/img/plot/%.png : $(Raw)/plot/%.plt
 	gnuplot $< > $@
 
 $(Out)/%.html : $(Raw)/*.md
-	echo page $<
+	echo pa
+	ge $<
 		pandoc -s \
               -r markdown+simple_tables+table_captions \
               --biblio $(Raw)/biblio.bib \
