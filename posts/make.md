@@ -1,6 +1,18 @@
 Make
 ----
 
+The grand-daddy of these is UNIX make. GNU make is ubiquitous in the linux world for installing and compiling software. It has been widely used to build computational pipelines because it supports:
+
++ Stopping and restarting computational processes
++ Running multiple, even thousands of jobs in parallel
+
+For some notes on its drawbacks, and some  modern alternatives see:
+ 
++ [http://www.ruffus.org.uk/design.html](http://www.ruffus.org.uk/design.html).
++ [Recursive Make considered harmful](http://aegis.sourceforge.net/auug97.pdf)
+
+# About MAKE
+
 A domain-specific language for handling dependencies.
 
 MAKE = list of rules:
