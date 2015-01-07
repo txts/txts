@@ -1,6 +1,8 @@
 <h1>Cs510 Hw1 </h1>
 
-<small>
+(See also: [Homework1](hw1.html).)
+
+<font size=1>
 
 Date:
 

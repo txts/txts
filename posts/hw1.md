@@ -3,6 +3,7 @@ title: Homework1
 mantra: Cause we get more done if we work together
 ---
 
+(See also: [the grading rubric](rubric1.html).)
 
 ## Goals 
 
@@ -181,7 +182,7 @@ you think you have completed.
 In the rubric:
 
 + Where it says _modified X_, this means at least one change (however slight)
-  from the stuff already in http://txts.github.io/slides/talk1.html.
+  from the stuff already in [the example site][egsite].
 + Where is says "all members have committed", we will check that using
   the github logs. Note that we do **not** expect to see _outliers_ in the commit
   pattern such as one person with 90% or 10% of the commits.
