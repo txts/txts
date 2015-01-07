@@ -15,7 +15,7 @@ Learn how to work effectively in teams via
 
 ## What to Do 
 
-Build a very simple static web site that is:
+Build a very [simple static web site][egsite] that is:
 
 + Feed from a Github repo (so any context committed to the repo updates the website)
 + That is shared with your team mates via Github (so multiple people can work on the site)
@@ -30,11 +30,14 @@ person)
 + Do not put contact details onto the slides for each person (death to spammers);
 + The large project proposal will be described to you in lectures.
 
-For an example of those slides:
-
-+ See http://txts.github.io/slides/talk1.html.
+ 
+[egsite]: http://www4.ncsu.edu/~tjmenzie/cs510/spring15/hw/1/slides/talk1.html "Example of site".
 
 ## How to Start 
+
+### Set up your WWW4 space
+
+Using the instructions at https://oit.ncsu.edu/afs/www-setup.
 
 ### Set up Github
 
@@ -43,22 +46,13 @@ For an example of those slides:
 + In that Github, create a new organization (called, e.g. XYZ).
 + Go to https://github.com/orgs/XYZ/teams and create a new team with _Admin Access_.
 + Add all your team members to that team.
-+ In that organization, create repos called  `XYZ.github.io`,
-  `fry` and `txts`.
++ In that organization, create repos called   `txts`.
   
-### Set up a public static web site using Github
-
-Note : do not use Github's ghpage tool. And do not use Jekyll. We are doing this
-  old school.
-
-+ In the XYZ organization, create a new repo called XYZ.github.io
-+ In that repo, add a file `index.html` with some text in it like _hello_
-+ In a few minutes, it your surf to http://XYZ.github.io, you should
-	  see _hello_.
+ 
 
 ### Set up Tools
 
-Set up pandoc, texlive, gnuplot, pandoc-citeproc, make, bash, awk, graphviz and
+Set up pandoc, graphviz, gnuplot, pandoc-citeproc, make, bash, awk, graphviz and
 20 other little tools used for this work
 
 + Method1: the easy way. Log into the  `\_timmnix` image I made for you at
@@ -70,9 +64,9 @@ Set up pandoc, texlive, gnuplot, pandoc-citeproc, make, bash, awk, graphviz and
   your own hardware  (e.g. ubuntu on virtual box
   on whatever machine you like). 
 
-Note I will support Method1 users. As to Method2 and Method3,
+Note I will support Method1 users. As to Method2  
 **you are on their own**. If you
-have any problems with Method2,3 then my only help will be to say "try method1".
+have any problems with Method2  then my only help will be to say "try method1".
 
 ### Download the repos
 
@@ -80,24 +74,27 @@ have any problems with Method2,3 then my only help will be to say "try method1".
 cd /afs/unity.ncsu.edu/users/a-z/unityid # or wherever you work
 mkdir gits
 cd gits
-git clone https://github.com/XYZ/fry.git
-cd fry
-wget https://github.com/txts/fry/archive/master.zip
-unzip master.zip
-mv fry-master/* .
-rm -rf *.zip fry-master
-git add --all
-cd ..
-
-git clone https://github.com/XYZ/txts
+git clone https://github.com/XYZ/txts.git
 cd txts
 wget https://github.com/txts/txts/archive/master.zip
 unzip master.zip
 mv txts-master/* .
-rm -rf *.zip txts-master
-git all --all
-cd ..
+git add --all
+rm master.zip
 ```
+
+Tell the repo where to place its output. 
+Edit the file `gits/txt/Makefile` and make it look something like the following.
+Note that `../../www` is your NcState www4 space.
+
+```
+Out=../../www/cs510/spring15/hw/1
+Raw=$(PWD)
+Lib=./lib
+
+include $(Lib)/lib.mk
+```
+
 
 Then do a _test install_, as shown below.
 
@@ -105,28 +102,59 @@ Then do a _test install_, as shown below.
 
 ### Test Install
 
-+ In a blank directory check out the two repos described below.
-+ Edit the file txts/Makefile. Change `Out` to point to some output directory.
-+ cd txts
-+ make ready
-+ Go to the _slides_ directory and look at `talk1.html`.
-+ Check that it looks something like http://txts.github.io/slides/talk1.html.
+```
+cd gits/txts
+make
+```
+
+You should see a lot of output.
+
+Point a browser at http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html.
+
+You should now see something like [my example site][egsite].
+
+Now do it again
+
+```
+cd gits/txt
+make
+```
+
+And you should see no output since the slides are up to date with your current contents.
 
 ### Test Configuration Tools
 
-+ Delete any file in the `Out` directory
-+ cd txts
-+ make ready
-+ Check that the deleted file has returned
+Edit `gits/txts/slides/talk1.md`. Change the title of the talk. Then
+
+```
+cd gits/txts
+make
+```
+
+There should be just a little output.
+
+Point a browser at http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html.
+
+Can you see the new title?
 
 ### Test update
 
-+ cd txts/slides
-+ Make some change to the text in `talk1.html`
-+ cd txts
-+ make commit
-+ Delete your `Out` directory and the the two repos (using `rm -rf`)
-+ Repeat the test install. Check that you see your text change in the new `talk1.html`.
+Check out the repo git clone https://github.com/XYZ/txts.git on another machine.
+
+Add a new word to the title of `gits/txts/slides/talk1.md`. Commit the changes.
+
+Come back to your VCL account and return to `/afs/unity.ncsu.edu/users/a-z/unityid/`
+
+```
+cd git/txts
+make update
+make
+```
+
+Point a browser at http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html.
+
+Can you see the new title?
+
 
 ## What to hand in 
 

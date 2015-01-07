@@ -22,7 +22,9 @@ gitting:
 	git config --global credential.helper cache
 	git config credential.helper 'cache --timeout=3600'
 
-commit: ready
+commit: ready save
+
+save:
 	- git status
 	- git commit -a
 	- git push origin master
