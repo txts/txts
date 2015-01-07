@@ -1,6 +1,4 @@
-___
-title: CS510 Homework Rubric
----
+<h1>Cs510 Hw1 </h1>
 
 <small>
 
