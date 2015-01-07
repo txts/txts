@@ -30,14 +30,14 @@ person)
 + Do not put contact details onto the slides for each person (death to spammers);
 + The large project proposal will be described to you in lectures.
 
- 
 [egsite]: http://www4.ncsu.edu/~tjmenzie/cs510/spring15/hw/1/slides/talk1.html "Example of site"
 
 ## How to Start 
 
 ### Set up your WWW4 space
 
-Using the instructions at https://oit.ncsu.edu/afs/www-setup.
+Using the instructions given to you at 
+[https://oit.ncsu.edu/afs/www-setup](https://oit.ncsu.edu/afs/www-setup).
 
 ### Set up Github
 
@@ -56,15 +56,18 @@ Set up pandoc, graphviz, gnuplot, pandoc-citeproc, make, bash, awk, graphviz and
 20 other little tools used for this work
 
 + Method1: the easy way. Log into the  `\_timmnix` image I made for you at
-  http://http://vcl.drupal.ncsu.edu.  Then `cd /afs/unity.ncsu.edu/users/a-z/unityid/`
+  [http://http://vcl.drupal.ncsu.edu](http://http://vcl.drupal.ncsu.edu).  
+  Then `cd /afs/unity.ncsu.edu/users/a-z/unityid/`
   Now you are using all the tools I installed for you, and you can write to
   your personnel file space.
-+ Method2: another way. Get a c9.io account and  download and run https://github.com/timm/timmnix/blob/master/install.sh from the command line terminal.
-+ Method3: a hard way. As per Method  but use
-  your own hardware  (e.g. ubuntu on virtual box
++ Method2: another way. Download and run 
+  [https://github.com/timm/timmnix/blob/master/install.sh](https://github.com/timm/timmnix/blob/master/install.sh)
+  from the command line terminal
+	on your own UNIX installation
+  hardware  (e.g. ubuntu on virtual box
   on whatever machine you like). 
 
-Note I will support Method1 users. As to Method2  
+Note I will support Method1 users. As to Method2
 **you are on their own**. If you
 have any problems with Method2  then my only help will be to say "try method1".
 
@@ -109,7 +112,8 @@ make
 
 You should see a lot of output.
 
-Point a browser at http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html.
+Point a browser at 
+[http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html](http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html).
 
 You should now see something like [my example site][egsite].
 
@@ -133,7 +137,8 @@ make
 
 There should be just a little output.
 
-Point a browser at http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html.
+Point a browser at 
+[http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html](http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html).
 
 Can you see the new title?
 
@@ -151,7 +156,8 @@ make update
 make
 ```
 
-Point a browser at http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html.
+Point a browser at 
+[http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html](http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html).
 
 Can you see the new title?
 
@@ -172,7 +178,7 @@ you think you have completed.
 + Do not write anything into the columns _peer score_`, _final score_
 
 
-In the following:
+In the rubric:
 
 + Where it says _modified X_, this means at least one change (however slight)
   from the stuff already in http://txts.github.io/slides/talk1.html.

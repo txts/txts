@@ -74,7 +74,7 @@ $(Out)/img/dot/%.png : $(Raw)/dot/%.dot
 $(Out)/img/plot/%.png : $(Raw)/plot/%.plt
 	gnuplot $< > $@
 
-$(Out)/posts/%.html : $(Raw)/posts/*.md
+$(Out)/posts/%.html : $(Raw)/posts/%.md
 	pandoc -s \
               -r markdown+simple_tables+table_captions \
 		-B $(Raw)/before.html \
