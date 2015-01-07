@@ -4,8 +4,10 @@ mantra: Cause we get more done if we work together
 ---
 
 (See also: [the grading rubric](rubric1.html);
-a [tutorial on make](make.html); and 
-the [Pandoc home page](http://johnmacfarlane.net/pandoc/).)
+a [tutorial on make](make.html); 
+the [Pandoc home page](http://johnmacfarlane.net/pandoc/);
+the [dot reference page](http://www.graphviz.org/Documentation.php);
+and the [gnuplot doco ](http://gnuplot.sourceforge.net/demo/).)
 
 ## Goals 
 
@@ -14,7 +16,7 @@ Learn how to work effectively in teams via
 + Version control systems (Github)
 + Configuration management systems (UNIX Makefile)
 + Virtualization (NcState Virtual Computing Lab)
-+ Text-based markup tools (Pandoc, markdown, gnuplot, latex, bibtex)
++ Text-based markup tools (Pandoc, markdown, gnuplot, graphviz, bibtex)
 
 ## What to Do 
 
