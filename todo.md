@@ -13,7 +13,7 @@ if gets fired off on a Raw directory and is written to an Out directory
 so the whole site is
 
 ```
-cook
+.cook
    lib # my code
    inc # a whole bunch of defaults used in compilation
          references.bib
@@ -21,7 +21,7 @@ cook
          before.html
          after.html
          template.html
-raw
+.raw
    inc
      optional stuff 
   the rest of your stuff   
