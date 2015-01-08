@@ -1,9 +1,10 @@
 write a make file that is a recursive walker
 
 ```
-.md ==> .html
-.dot ==> png
-.plt ==> png
+.md ==> .html % via pandoc
+.mkd ==> .html % via pandoc slides
+.dot ==> png # graphs
+.plt ==> png # plots
 .x   ==> x
 ```
 
