@@ -92,6 +92,9 @@ In summary, from the two to three dozen papers:
 
 <center><img src="../img/repgrid.png"></center>
 
+(These  _clustered heat maps_ 
+can be [generated in "R"](http://www.r-bloggers.com/drawing-heatmaps-in-r/).)
+
 Then :
 
 + For each of the clusters found above, offer a strategic comment such as _this is good_, or _here, bad things happens_.
