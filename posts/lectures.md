@@ -2,6 +2,6 @@
 
 ## Week1
 
-+ [Se101](se.html)
++ [Se101](se101.html)
 + [Make](make.html)
 
