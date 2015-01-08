@@ -13,7 +13,14 @@ so the whole site is
 
 ```
 _site
-   _lib 
-     my code
-   your stuff
-   ```
+   lib # my code
+   inc # a whole bunch of defaults used in compilation
+         references.bib
+         style.css
+         before.html
+         after.html
+         template.html
+inc
+     optional stuff 
+the rest of your stuff   
+```
