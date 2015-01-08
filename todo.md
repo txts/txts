@@ -12,7 +12,7 @@ if gets fired off on a Raw directory and is written to an Out directory
 so the whole site is
 
 ```
-_site
+cook
    lib # my code
    inc # a whole bunch of defaults used in compilation
          references.bib
@@ -20,7 +20,18 @@ _site
          before.html
          after.html
          template.html
-inc
+raw
+   inc
      optional stuff 
-the rest of your stuff   
+  the rest of your stuff   
+```
+
+during compilation, we use files in cook/inc UNLESS they are found in raw/inc
+
+```
+ifeq ($(wildcard file1),) 
+    CLEAN_SRC =
+else 
+    CLEAN_SRC = *.h file3
+endif
 ```
