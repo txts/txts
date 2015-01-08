@@ -129,7 +129,7 @@ Edit the file `gits/txt/Makefile` and make it look something like the following.
 Note that `../../www` is your NcState www4 space.
 
 ```
-Out=../../www/cs510/spring15/hw/1
+Out=../../www/cs510
 Raw=$(PWD)
 Lib=./lib
 
@@ -214,6 +214,12 @@ Point a browser at
 
 Can you see the new title?
 
+## Using the Installed Site
+
+
+Now that the site is working, write a proposal for [project1](projects.html).
+Less than 10 slides saying what it is you are wanting to do. Also, add
+four more slides containing info on your team members.
 
 ## What to hand in 
 
