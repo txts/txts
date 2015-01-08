@@ -1,5 +1,9 @@
 % Eating Habits
+<<<<<<< HEAD
 % John Doe
+=======
+% Jane Dove
+>>>>>>> 2bc0e3cc73e7ffa6d92787641c7909af2f9f2a5f
 % March 22, 2005
 
 # In the morning

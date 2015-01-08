@@ -1,10 +1,7 @@
-Parent=./..
 
-Fry=./../fry
-Out=./../txts.github.io
+Out=../../www/cs510
 Raw=$(PWD)
+Lib=./lib
 
-include $(Fry)/fry.mk
+include $(Lib)/lib.mk
 
-overRideSomething:
-	@echo do nothing
