@@ -6,7 +6,7 @@ The grand-daddy of these is UNIX make. GNU make is ubiquitous in the linux world
 + Stopping and restarting computational processes
 + Running multiple, even thousands of jobs in parallel
 
-For some notes on its drawbacks, and some  modern alternatives see:
+For some notes on its drawbacks, and some  more recent alternatives see:
  
 + [http://www.ruffus.org.uk/design.html](http://www.ruffus.org.uk/design.html).
 + [Recursive Make considered harmful](http://aegis.sourceforge.net/auug97.pdf)
@@ -127,30 +127,30 @@ Note that the last line includes another file and that
 file has many rules. _Any_ of these can be called
 from the command line using (e.g. `make ready` or `make gitting`).
 
+First rule is the default rule
+
 ```
-Dirs=$(Lib) $(Raw) $(Out)
-
-# subroutine. changes pathnames and suffixes.
-# called via $(call target,dir,oldExt,newExtension,OldPath,NewPath)
-define target
-   $(subst $4,$5,\
-      $(subst .$2,.$3,\
-         $(shell ls $(Raw)/$1/*.$2)))
-endef
-
-# First rule is the default rule
 ready : dirs files dots talks plots pages
 	@echo "See $(Out)"
+```
 
-# convenience code for stopping GIT pestering your for passwords
+Convenience code for stopping GIT pestering your for passwords
+
+```
 gitting:
 	git config --global credential.helper cache
 	git config credential.helper 'cache --timeout=3600'
+```
 
-# As a commit hook, as a side effect of saving, we update site
+As a commit hook, as a side effect of saving, we update site
+
+```
 commit: ready save
+```
 
-# conveniece functions for git
+Convenience functions for git
+
+```
 save:
 	- git status
 	- git commit -a
@@ -169,8 +169,11 @@ update:
 
 status:
 	- git status
+```
 
-# setting up dir structure
+Setting up dir structure
+
+```
 Skeleton=dot etc plot slides verbatim/img
 dirs: 
 	@$(foreach d,$(Skeleton),mkdir -p $(Raw)/$d;)
@@ -182,18 +185,40 @@ dirs:
 
 files:
 	@cp -vrup $(Raw)/verbatim/* $(Out)
+```
 
-# generates  lists of files to switch
+Generates  lists of files to switch
+
+
+```
 talks:  $(call target,slides,md,html,$(Raw),$(Out))
 dots  : $(call target,dot,dot,png,$(Raw),$(Out)/img)
 plots : $(call target,plot,plt,png,$(Raw),$(Out)/img)
 pages : $(call target,posts,md,html,$(Raw),$(Out))
+```
 
-# debugging trick
+Subroutine. changes pathnames and suffixes.
+called via $(call target,dir,oldExt,newExtension,OldPath,NewPath)
+
+```
+define target
+   $(subst $4,$5,\
+      $(subst .$2,.$3,\
+         $(shell ls $(Raw)/$1/*.$2)))
+endef
+```
+
+Debugging trick
+
+```
 debug:
 	echo  $(call target,posts,md,html,$(Raw),$(Out))
+```
 
-# finally, the workers
+Finally, the workers
+
+Making slides:
+```
 $(Out)/slides/%.html : $(Raw)/slides/%.md 
 	pandoc -s \
               --webtex -i -t slidy \
@@ -201,13 +226,25 @@ $(Out)/slides/%.html : $(Raw)/slides/%.md
               --biblio $(Raw)/biblio.bib \
 	      -c        ../img/slidy.css \
               -o $@ $<
+```
 
+Making directed graphs.
+
+```
 $(Out)/img/dot/%.png : $(Raw)/dot/%.dot
 	dot -Tpng -o $@ $<
+```
 
+Visualizing data
+
+```
 $(Out)/img/plot/%.png : $(Raw)/plot/%.plt
 	gnuplot $< > $@
+```
 
+Making good old fashioned html pages.
+
+```
 $(Out)/posts/%.html : $(Raw)/posts/%.md
 	pandoc -s \
               -r markdown+simple_tables+table_captions+pipe_tables \
@@ -216,3 +253,5 @@ $(Out)/posts/%.html : $(Raw)/posts/%.md
 	            -c        ../img/posty.css \
               -o $@ $<
 ```
+
+That's all folks.

@@ -43,11 +43,29 @@ person)
 
 You will be working in five _spaces_:
 
+
 + NCSU VCL environment;
 + Your NCSU personnel storage space
 + Your www4 account (which is inside the storage space)
 + Your local copies of your github repo
 + Your public sharable copy of the repo on Github
+
+Here is the login page for VCL http://vcl.drupal.ncsu.edu
+
+<center><img width=500 src="../img/vcl1.png"></center>
+
+From there, you select a **New Reservation**.
+
+<center><img width=500 src="../img/vcl2.png"></center>
+
+Then you select _timmnix (perhaps giving yourself a longer duration than 1 hour).
+
+<center><img width=500 src="../img/vcl3.png"></center>
+
+Then you grab the IP address from which you can (e.g. `ssh unityid@123.45.678
+
+<center><img width=500 src="../img/vcl4.png"></center>
+
 
 You will get that all muddled and you will spend some time sorting all that out:
 
@@ -76,6 +94,10 @@ So, as quick as you can, make all the above mistakes and move on from there.
 
 Using the instructions given to you at 
 [https://oit.ncsu.edu/afs/www-setup](https://oit.ncsu.edu/afs/www-setup).
+
+
+<center><img width=500 src="../img/www.png"></center>
+
 
 ### Set up Github
 
@@ -151,7 +173,8 @@ make
 You should see a lot of output.
 
 Point a browser at 
-[http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html](http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html).
+[http://www4.ncsu.edu/~tjmenzie/cs510/slides/talk1.html](http://www4.ncsu.edu/~tjmenzie/cs510/slides/talk1.html).
+
 
 You should now see something like [my example site][egsite].
 
@@ -191,7 +214,7 @@ make
 There should be just a little output.
 
 Point a browser at 
-[http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html](http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html).
+[http://www4.ncsu.edu/~tjmenzie/cs510/slides/talk1.html](http://www4.ncsu.edu/~tjmenzie/cs510/slides/talk1.html).
 
 Can you see the new title?
 
@@ -210,7 +233,7 @@ make
 ```
 
 Point a browser at 
-[http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html](http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html).
+[http://www4.ncsu.edu/~tjmenzie/cs510/slides/talk1.html](http://www4.ncsu.edu/~tjmenzie/cs510/slides/talk1.html).
 
 Can you see the new title?
 
