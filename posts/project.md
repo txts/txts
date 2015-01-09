@@ -1,14 +1,15 @@
+---
+title: Class Project
+---
 
-# Class Project
-
-## Summary
+# Summary of Projects
 
 Project1: do something   
 Project2: reflect on what others did, observe "bad smells", suggest improvements.
 
-## Project1
+# Project1
 
-### Tracks
+## Tracks
 
 + Empirical - Answer a research question using data.
     + Do this one if your team  like data mining
@@ -17,7 +18,7 @@ Project2: reflect on what others did, observe "bad smells", suggest improvements
 + Management - Apply new research results to practice.
     + Do this one if your team likes the strategic view
 
-### Tracking
+## Tracking
 
 + For all this work, work Develop a software engineering research prototype and conduct preliminary evaluation of the developed prototype in Github. 
       + Define a workflow, which is documented as GitHub labels.
@@ -26,9 +27,9 @@ Project2: reflect on what others did, observe "bad smells", suggest improvements
  
 Note that Project2 will use these tracks to check for _bad smells_.
 
-### About the Tracks
+## About the Tracks
 
-#### TEchnical Track
+### TEchnical Track
 
 Develop **two** software engineering research prototype and conduct
 preliminary evaluation of the developed prototypes. In your report,
@@ -43,7 +44,7 @@ Report + short video (5mins) describing the tools (posted to YouTube) and a
 link to code in a github repository.
 
 
-#### Empirical Track
+### Empirical Track
 
 + Using a dataset from github, http://openscience.us/repo, Stack Overflow, or other approved dataset.
 + Manually sample some data, form hypotheses and research questions.
@@ -51,7 +52,7 @@ link to code in a github repository.
 + Write report including figures, relevant statistics, etc.
       + Link to data processing code in a github repository
 
-#### Management Track: Thinking Beyond the State of the Art
+### Management Track: Thinking Beyond the State of the Art
 
 Select 8 papers from [ICSE'14](http://dl.acm.org/citation.cfm?id=2568225&CFID=470308131&CFTOKEN=61523672), Technical Track, 2 max from NIER Track on a topic that interests you.
 
@@ -107,6 +108,6 @@ For examples of this kind of analysis, see
 (but note that these do not do the initial mass queries to find a large corpus).
 
 
-## Project 2
+# Project 2
 
 Starts in April. Details TBD. But it studies the workflows seen in Project1.

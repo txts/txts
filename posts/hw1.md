@@ -1,7 +1,8 @@
 ---
-title: Homework1
+title: Homework0
 mantra: Cause we get more done if we work together
 ---
+
 
 (See also: [the grading rubric](rubric1.html);
 a [tutorial on make](make.html); 

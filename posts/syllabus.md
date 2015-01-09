@@ -1,7 +1,11 @@
+---
+title: Syllabus
+mantra: What is goingon?
+---
 
-# Syllabus, 
 
-## Software Engineering :  Spring'15: CSC 510 (2590)
+
+# Software Engineering :  Spring'15: CSC 510 (2590)
 
 T/Th 5:20 to 6:35  
 Room 01007, Engineering Building 1

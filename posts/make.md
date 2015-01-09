@@ -1,7 +1,28 @@
-Make
-----
+---
+title: Make
+---
 
-The grand-daddy of these is UNIX make. GNU make is ubiquitous in the linux world for installing and compiling software. It has been widely used to build computational pipelines because it supports:
+# What is Make?
+
+GNU Make is a tool which controls the generation of executables and
+other non-source files of a program from the program's source files.
+
+Make gets its knowledge of how to build your program from a file
+called the _Makefile), which lists each of the non-source files and how
+to compute it from other files. When you write a program, you should
+write a makefile for it, so that it is possible to use Make to build
+and install the program.  
+
+## Capabilities of Make
+
++  Make enables the end user to build and install your package without knowing the details of how that is done -- because these details are recorded in the makefile that you supply.
++ Make figures out automatically which files it needs to update, based on which source files have changed. It also automatically determines the proper order for updating files, in case one non-source file depends on another non-source file.
++ As a result, if you change a few source files and then run Make, it does not need to recompile all of your program. It updates only those non-source files that depend directly or indirectly on the source files that you changed.
++ Make is not limited to any particular language. For each non-source file in the program, the makefile specifies the shell commands to compute it. These shell commands can run a compiler to produce an object file, the linker to produce an executable, ar to update a library, or TeX or Makeinfo to format documentation. 
+
+GNU make is ubiquitous in the linux world for installing and compiling
+software. It has been widely used to build computational pipelines
+because it supports:
 
 + Stopping and restarting computational processes
 + Running multiple, even thousands of jobs in parallel
@@ -11,7 +32,7 @@ For some notes on its drawbacks, and some  more recent alternatives see:
 + [http://www.ruffus.org.uk/design.html](http://www.ruffus.org.uk/design.html).
 + [Recursive Make considered harmful](http://aegis.sourceforge.net/auug97.pdf)
 
-# About MAKE
+# More about MAKE
 
 A domain-specific language for handling dependencies.
 
