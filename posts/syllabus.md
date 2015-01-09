@@ -106,15 +106,16 @@ Project 2: 20 marks:checking for bad smells
 
 ### Schedule
 
-mark    when             what
+ mark   when             what
 -----   -------          ---------------------
-10      end Feb          Project1a
-20      Thurs march 19   Mid-term 5:30 to 6:30
-15      end March        Project1b
-10      early April      Project1c
-10      end April        Project2
-20      Thurs april 30   Final Exam  6pm to 8pm
-100     Total
+   30   Jan,Feb,Mar      5 homeworks, 2 parts, 3 marks per part
+    5   end Feb          Project1a : preliminary project report
+   10   Thurs march 19   Mid-term 5:30 to 6:30
+   15   end March        Project1b : full project report
+    5   early April      Project1c : seminar presentation
+   15   end April        Project2  : looking for "bad smells"
+   20   Thurs april 30   Final Exam  6pm to 8pm
+  100   Total
 
 ### Final Grades
 
