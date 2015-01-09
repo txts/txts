@@ -1,9 +1,8 @@
-<h1>cs510</h1>
+<h1>About this class</h1>
 
 
 The class is designed about the following definition.
-
-SE is the 
+Software engineering is the 
 
 + _process_ of the
 + _design_,
