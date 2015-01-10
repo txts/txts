@@ -2,12 +2,14 @@
 
 #todo needs a zap to kiil everything
 #     needs biblio and other files
+#     need a dirs that ignores "_"
 
-Lib=/home/ubuntu/workspace/tmp/in# full path name to top
-Out=$(Lib)# full pathname to output dir
-In=$(Lib)/_in# full pathname to source
-Local=$(Lib)/_local# place to store your compile-time files
-Share=$(Lib)/_share# full name name to files used at compile time
+#Full pathnames: 
+Lib=/home/ubuntu/workspace/tmp/in# top
+Out=$(Lib)#                        output dir
+In=$(Lib)/_in#                     source
+Share=$(Lib)/_share#               files used at compile time
+Local=$(Lib)/_local#               local variants of compile-time files
 
 define slide
 	pandoc -s             \
@@ -24,7 +26,6 @@ define page
 endef
 
 ##############################
-
 
 define files
 	$(shell find . -maxdepth 1  -type f  \
