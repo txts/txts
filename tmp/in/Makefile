@@ -1,11 +1,24 @@
 # rpm= recursive pandoc make
 
+# define BODY
+# Version of  has been released.
+# 
+# It $$ can be downloaded from $(PWD)
+# 
+# etc, etc.
+# endef
+# 
+# export BODY
+# 
+# all:
+# 	echo  "$$BODY"  > a.txt
+# 
 #todo needs a zap to kiil everything
 #     needs biblio and other files
 #     need a dirs that ignores "_"
 
 #Full pathnames: 
-Lib=/home/ubuntu/workspace/tmp/in# top
+Lib=$(PWD)# top
 Out=$(Lib)#                        output dir
 In=$(Lib)/_in#                     source
 Share=$(Lib)/_share#               files used at compile time
