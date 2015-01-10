@@ -4,6 +4,7 @@
 #     needs biblio and other files
 #     need a dirs that ignores "_"
 
+
 #Full pathnames: 
 Lib=/home/ubuntu/workspace/tmp/in# top
 Out=$(Lib)#                        output dir
