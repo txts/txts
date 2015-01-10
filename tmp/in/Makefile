@@ -1,14 +1,13 @@
-Lib=/home/ubuntu/workspace/tmp/in#
-Out=$(Lib)/out#
-In=$(Lib)/in#
-Here=$(PWD)#
-There=$(subst $(In),$(Out),$(Here))#
+# rpm= recursive pandoc make
 
-define files
-	$(shell find . -maxdepth 1  -type f  \
-	 | grep -v Makefile \
-	 | grep -v _  | awk '{print "$(There)/" $$1}')
-endef
+#todo needs a zap to kiil everything
+#     needs biblio and other files
+
+Lib=/home/ubuntu/workspace/tmp/in# full path name to top
+Out=$(Lib)# full pathname to output dir
+In=$(Lib)/_in# full pathname to source
+Local=$(Lib)/_local# place to store your compile-time files
+Share=$(Lib)/_share# full name name to files used at compile time
 
 define slide
 	pandoc -s             \
@@ -24,11 +23,22 @@ define page
        -o $(2) $(1)
 endef
 
-define worker
-     @cd $(realpath $(1));\
-	 @$(MAKE -s -f $(Lib)/Makefile Here=$(realpath $(1)) sub;
+##############################
+
+
+define files
+	$(shell find . -maxdepth 1  -type f  \
+	 | grep -v Makefile \
+	 | grep -v _  | awk '{print "$(There)/" $$1}')
 endef
 
+define worker
+     cd $(realpath $(1)); \
+	 $(MAKE) -s -f $(Lib)/Makefile Here=$(realpath $(1)) sub;
+endef
+
+Here=$(PWD)#
+There=$(subst $(In),$(Out),$(Here))#
 Goals=$(subst .md,.html,\
       $(subst .mkd,.html,\
         $(subst .dot,.png,\
@@ -36,7 +46,8 @@ Goals=$(subst .md,.html,\
               $(call files)))))
 
 all:
-	$(call worker,$(In))
+	@mkdir -p $(Out) $(In) $(Share) $(Local)
+	@$(call worker,$(In))
 	
 sub : dirs $(Goals) 
 	@(echo $(PWD))
