@@ -4,7 +4,6 @@
 #     needs biblio and other files
 #     need a dirs that ignores "_"
 
-
 #Full pathnames: 
 Lib=/home/ubuntu/workspace/tmp/in# top
 Out=$(Lib)#                        output dir
@@ -45,7 +44,7 @@ Goals=$(subst .md,.html,\
       $(subst .mkd,.html,\
         $(subst .dot,.png,\
           $(subst .plt,.png,\
-              $(call files)))))
+             $(call files)))))
 
 all:
 	@mkdir -p $(Out) $(In) $(Share) $(Local)
