@@ -80,7 +80,8 @@ $(Out)/img/plot/%.png : $(Raw)/plot/%.plt
 
 $(Out)/posts/%.html : $(Raw)/posts/%.md
 	pandoc -s \
-              -r markdown+simple_tables+table_captions+pipe_tables \
+              --toc  \
+               -r markdown+simple_tables+table_captions+pipe_tables \
 		-B $(Raw)/before.html \
               --biblio $(Raw)/biblio.bib \
 	            -c        ../img/posty.css \

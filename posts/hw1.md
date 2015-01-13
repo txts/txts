@@ -1,7 +1,8 @@
 ---
-title: Homework1
+title: Homework0
 mantra: Cause we get more done if we work together
 ---
+
 
 (See also: [the grading rubric](rubric1.html);
 a [tutorial on make](make.html); 
@@ -37,12 +38,67 @@ person)
 
 [egsite]: http://www4.ncsu.edu/~tjmenzie/cs510/slides/talk1.html "Example of site"
 
+## What you Will do Wrong
+
+
+
+You will be working in five _spaces_:
+
+
++ NCSU VCL environment;
++ Your NCSU personnel storage space
++ Your www4 account (which is inside the storage space)
++ Your local copies of your github repo
++ Your public sharable copy of the repo on Github
+
+Here is the login page for VCL http://vcl.drupal.ncsu.edu
+
+<center><img width=500 src="../img/vcl1.png"></center>
+
+From there, you select a **New Reservation**.
+
+<center><img width=500 src="../img/vcl2.png"></center>
+
+Then you select _timmnix (perhaps giving yourself a longer duration than 1 hour).
+
+<center><img width=500 src="../img/vcl3.png"></center>
+
+Then you grab the IP address from which you can (e.g. `ssh unityid@123.45.678
+
+<center><img width=500 src="../img/vcl4.png"></center>
+
+
+You will get that all muddled and you will spend some time sorting all that out:
+
++ When you login, you will be in the NCSU VCL environment. This is a temporary
+  space that _disappears_ when you log out, _destroying_ any work you did there.
++ When you `cd` across to your personnel  storage space, you have jumped
+  files systems. Anything you change here, stays there forever.
++ But, unless you _start_ in VCL and _then_ `cd` to permanent, you will
+  not be able to access all the tools I configured for your work.
++ A small bit of your personnel  storage is your `www` directory. You will
+  lose it and try to write your static web pages to some other directory.
+  This will either (a) cause a crash or (b) mean that your  web site does not update.
++ Another small bit of your personnel storage is contents of your github
+  repo. You will forget to work in that repo, or you won't check it out in the
+  first place, or you will forget to commit your changes from personnel  storage.
+  In all those cases, your team mates will be unable to share code with you.
++ On the web is your github repo. You will forget to regularly update and
+  commit from that repo. Which means you won't share anything with your
+  colleagues.
+
+So, as quick as you can, make all the above mistakes and move on from there.
+
 ## How to Start 
 
 ### Set up your WWW4 space
 
 Using the instructions given to you at 
 [https://oit.ncsu.edu/afs/www-setup](https://oit.ncsu.edu/afs/www-setup).
+
+
+<center><img width=500 src="../img/www.png"></center>
+
 
 ### Set up Github
 
@@ -96,7 +152,7 @@ Edit the file `gits/txt/Makefile` and make it look something like the following.
 Note that `../../www` is your NcState www4 space.
 
 ```
-Out=../../www/cs510/spring15/hw/1
+Out=../../www/cs510
 Raw=$(PWD)
 Lib=./lib
 
@@ -118,7 +174,8 @@ make
 You should see a lot of output.
 
 Point a browser at 
-[http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html](http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html).
+[http://www4.ncsu.edu/~tjmenzie/cs510/slides/talk1.html](http://www4.ncsu.edu/~tjmenzie/cs510/slides/talk1.html).
+
 
 You should now see something like [my example site][egsite].
 
@@ -158,7 +215,7 @@ make
 There should be just a little output.
 
 Point a browser at 
-[http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html](http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html).
+[http://www4.ncsu.edu/~tjmenzie/cs510/slides/talk1.html](http://www4.ncsu.edu/~tjmenzie/cs510/slides/talk1.html).
 
 Can you see the new title?
 
@@ -177,10 +234,16 @@ make
 ```
 
 Point a browser at 
-[http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html](http://www4.ncsu.edu/\~unityId/cs510/spring15/hw/1/slides/talk1.html).
+[http://www4.ncsu.edu/~tjmenzie/cs510/slides/talk1.html](http://www4.ncsu.edu/~tjmenzie/cs510/slides/talk1.html).
 
 Can you see the new title?
 
+## Using the Installed Site
+
+
+Now that the site is working, write a proposal for [project1](projects.html).
+Less than 10 slides saying what it is you are wanting to do. Also, add
+four more slides containing info on your team members.
 
 ## What to hand in 
 

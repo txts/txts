@@ -44,7 +44,7 @@ caption,th {
 h1,h2,h3,h4,h5,h6 {
     font-size:100%;
     font-weight:400;
-    color:#20639b;
+    color:#E51837;
     margin:1em 0;
 }
 
@@ -180,8 +180,13 @@ h1 {
     border-bottom:2px dotted #ddd;
 }
 
-a,a:visited,code {
-    color:#f06024;
+a { 	text-decoration: none;
+	color: #A52A2A;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #A78263;
 }
 
 h2 {
@@ -279,7 +284,7 @@ list-style-type: none;
 #navlist a:link, #navlist a:visited
 {
 color: #fff;
-background-color: #036;
+background-color: #E51837;
 text-decoration: none;
 }
 
