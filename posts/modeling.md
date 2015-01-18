@@ -1,26 +1,8 @@
-# Todo
-tropos slides to class
+----
+title: Modeling
+----
 
-add more columns to rubric
 
-+ Individually, each group member:
-    + take one project and check it out and try to build their web page
-    + Proposes some change to the project 
-    that doubles or halves the scope
-    + List technical options, with some potentional pros and
-    cons for each
-    + Suggests any freely available tools that handle, say,
-      the first half of the implementation (thus bootstrapping
-   the students further into the project.)
-+ As a group, meet to fill in the rubric for each of your
-  three projects
-+ Write a very small report that
-   + Comments on the scope (effort) of the project compared
-     across your own proposed scope and that of the 3 projects
-     you are reviewing.
-  
-
-# Modelling
 
 Soon or later, there will be a whiteboard or a piece of paper and someone will ask "how does it work?" and you will grab a pen/marker and start to draw.
 
