@@ -1,7 +1,7 @@
-----
+---
 title: Modeling
 mantra: How to write it down
-----
+---
 
 # How to Write it Down
 
