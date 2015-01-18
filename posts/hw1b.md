@@ -1,6 +1,6 @@
-----
+---
 title: Homework1, part B
-----
+---
 
 
 Your task is, as a group, to assess products from three different groups.
