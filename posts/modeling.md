@@ -124,7 +124,7 @@ a _bridge relation_)
 
 Another example (all inheritance):
 
-![all inheritance](img/umlinherit.png)
+![all inheritance](../img/umlinherit.png)
 
 ### Modeling "When"
 
@@ -247,12 +247,12 @@ Exception: containers.
 
 Odd:
 
-![role1.png](img/role1.png)
+![role1.png](../img/role1.png)
 
 Better: fix the properties that do not change in _Student_ and
 make the rest _Role_s that can change.
 
-![role1a.png](img/role1a.png)
+![role1a.png](../img/role1a.png)
 
 Advantage: if there are different methods for different roles,
 they can be stored seperately.
@@ -265,7 +265,7 @@ If there are many instances of Class Thing,
 + Management often includes _crud_ (create, read, update.
 find, delete).     
 
-![role3.png](img/role3.png)
+![role3.png](../img/role3.png)
 
 ### Rule3: 3-tiered Architecture
 
@@ -275,7 +275,7 @@ A common layered architecture is _data:model:dialog_ that takes care to sepeate 
 +  Lacks a persistency layer (no read/write to disk, network, whatever).
 + Lacks a dialog layer (no user-level control of the contents). 
 
-![role4.png](img/role4.png)
+![role4.png](../img/role4.png)
 
 So the following design is... odd. Dialog not
 seperated from model.
@@ -299,4 +299,4 @@ repeat that knowledge
   and configure _Employee_ and _EmployeeEd_ from
   the constraints.
 
-![role5.png](img/role5.png)
+![role5.png](../img/role5.png)
