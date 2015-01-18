@@ -1,8 +1,9 @@
 ----
 title: Modeling
+mantra: How to write it down
 ----
 
-
+# How to Write it Down
 
 Soon or later, there will be a whiteboard or a piece of paper and someone will ask "how does it work?" and you will grab a pen/marker and start to draw.
 
