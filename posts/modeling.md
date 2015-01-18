@@ -265,7 +265,7 @@ If there are many instances of Class Thing,
 + Management often includes _crud_ (create, read, update.
 find, delete).     
 
-![rule3.png](rule3.png)
+![role3.png](role3.png)
 
 ### Rule3: 3-tiered Architecture
 
@@ -275,7 +275,7 @@ A common layered architecture is _data:model:dialog_ that takes care to sepeate 
 +  Lacks a persistency layer (no read/write to disk, network, whatever).
 + Lacks a dialog layer (no user-level control of the contents). 
 
-![rule4.png](rule4.png)
+![role4.png](role4.png)
 
 So the following design is... odd. Dialog not
 seperated from model.
@@ -299,4 +299,4 @@ repeat that knowledge
   and configure _Employee_ and _EmployeeEd_ from
   the constraints.
 
-![rule5.png](rule5.png)
+![role5.png](role5.png)
