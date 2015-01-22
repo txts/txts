@@ -22,3 +22,12 @@ Write a (very very) short report that...
 + Propose some change to the project that halves the scope.
 + Comment on the scope (effort) of the project compared across your own proposed scope and that of the 3 projects you are reviewing.
 
+## What to hand in
+
+For each of the three projects your review:
+
++ A stapled bundle of two items
++ The original homework 1a from the other group
+      + On the rubric for that homework, _one_ column filled in with your score
++ A second piece of paper with your very very short report
+
