@@ -32,5 +32,8 @@ Barbie [using Github](https://raw.githubusercontent.com/txts/var/master/txt/old/
   as well as discussing an on-gong 
   [software analytics
    project](https://github.com/txt/txt.github.io/blob/master/tsp/times.sh)
-  
+
+# Week 5
+
++ [Effort estimation](https://www.evernote.com/shard/s14/sh/2473c229-d791-4f1c-bfe9-a49abce7cec1/694f2e98d8082a12)
 
