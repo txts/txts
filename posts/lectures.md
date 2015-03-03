@@ -37,4 +37,13 @@ Barbie [using Github](https://raw.githubusercontent.com/txts/var/master/txt/old/
 
 + [Effort estimation](https://www.evernote.com/shard/s14/sh/2473c229-d791-4f1c-bfe9-a49abce7cec1/694f2e98d8082a12)
 + [Sampling COCOMO's effort estimates](https://github.com/ai-se/cocomo/blob/master/src/var/a2ps.pdf)
-+ [Sampling COCOMO's "bad smells"](Sampling COCOMO's effort estimates](https://github.com/ai-se/cocomo/blob/master/src/var/a2ps.pdf)
++ [Sampling COCOMO's "bad smells"](https://github.com/ai-se/cocomo/blob/master/doc/badSmells.md)
+
+# Week 6
+
++ Requirements Engineering
+    + [When RE goes wrong](https://www.youtube.com/watch?v=BKorP55Aqvg)
+    + [Requirements Engineering](http://www.slideshare.net/timmenzies/re-44761824)
++ Github issues
+    + [API](https://gist.github.com/timm/a87fff1d8f0210372f26 )
+    + [Issues scrapper](https://gist.github.com/timm/a87fff1d8f0210372f26)

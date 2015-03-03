@@ -54,6 +54,6 @@ come from the tutor
 |  |  |The project has no "great dictator" (a single team members with more than 75% of the commits).|
 
 
-Final score: max(5,round(ticks/3)); so max = 5
+Final score: min(5,round(ticks/3)); so max = 5
 
 (^) For the management project "test procedure" is a list of sanity checks for the project
