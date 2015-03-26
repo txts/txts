@@ -116,8 +116,8 @@ Project 2: 20 marks:checking for bad smells
     5   end Feb          Project1a : preliminary project report
    10   Thurs march 19   Mid-term 5:30 to 6:30
    15   end March        Project1b : full project report
-    5   early April      Project1c : seminar presentation
-   15   end April        Project2  : looking for "bad smells"
+   10   early April      Project1c : seminar presentation
+   10   end April        Project2  : looking for "bad smells"
    20   Thurs april 30   Final Exam  6pm to 8pm
   100   Total
 
