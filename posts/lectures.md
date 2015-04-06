@@ -47,3 +47,13 @@ Barbie [using Github](https://raw.githubusercontent.com/txts/var/master/txt/old/
 + Github issues
     + [API](https://gist.github.com/timm/a87fff1d8f0210372f26 )
     + [Issues scrapper](https://gist.github.com/timm/a87fff1d8f0210372f26)
+
+# March
+
++ [Automated software engineering](http://goo.gl/0lzxh3)
++ [Blackbox tesing](https://github.com/txts/txts/blob/master/verbatim/pdf/blackbox.pdf)
+
+# April
+
++ [Quality Assurance on the Cheap](https://www.evernote.com/shard/s14/sh/d6342a90-424a-4160-86ef-f584929f8fd3/10fc3f74546d9a7b)
++ [Whitebox testing](https://github.com/txts/txts/blob/master/verbatim/pdf/blackbox.pdf)
